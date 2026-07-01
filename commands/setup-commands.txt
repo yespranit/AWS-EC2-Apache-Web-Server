@@ -1,0 +1,38 @@
+# Update system packages
+sudo dnf update -y
+
+# Install Apache HTTP Server
+sudo dnf install httpd -y
+
+# Start Apache service
+sudo systemctl start httpd
+
+# Enable Apache on boot
+sudo systemctl enable httpd
+
+# Check Apache status
+systemctl status httpd
+
+# Go to website directory
+cd /var/www/html
+
+# Create website file
+sudo vi index.html
+
+# Restart Apache
+sudo systemctl restart httpd
+
+# Check open ports
+ss -tulnp
+
+# Check OS version
+cat /etc/os-release
+
+# Check disk usage
+df -h
+
+# Check memory usage
+free -m
+
+# Check running processes
+top
